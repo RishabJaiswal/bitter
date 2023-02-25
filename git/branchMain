@@ -1,0 +1,10 @@
+#!/bin/sh
+
+#Create and checkout a branch from main without
+#switching from current branch
+
+git checkout main
+git pull
+
+date=$(date '+%d-%b'|awk '{print tolower($0)}')
+git checkout -b "rj/$date/$1"

@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#This script seize the given image to the given maxSize
+#$1= max height/width
+#$2= file name
+
+sips -Z "$1" "$2"

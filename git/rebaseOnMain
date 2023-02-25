@@ -1,0 +1,12 @@
+#!/bin/sh
+#This script rebases the current branch upon 
+#an updated main branch
+
+set -euo pipefail
+
+branch_name=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
+echo "Switching from $branch_name"
+git checkout main
+git pull
+git checkout "$branch_name"
+git rebase main

@@ -1,0 +1,8 @@
+#!/bin/sh
+#This script rebases the current branch upon 
+#an updated main branch & the force pushes the updated rebased branch
+
+set -euo pipefail
+
+rebaseOnMain
+git push -f

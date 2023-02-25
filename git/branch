@@ -1,0 +1,6 @@
+#!/bin/sh
+# Create a branch from the current branch
+# in this format: rj/<dd-mm>/<branch-name>
+
+date=$(date '+%d-%b'|awk '{print tolower($0)}')
+git checkout -b "rj/$date/$1"
