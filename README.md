@@ -29,10 +29,12 @@ follow these steps
 
 1. Open Raycast Preferences.
 2. Add the subdirectories in the `bitter` repository as `Script Commands` as shown in image
-![img.png](docs/Bitter-Raycast-setup.png)
+
+   ![img.png](docs/Bitter-Raycast-setup.png)
+
 3. `Bitter` tools are now available in your Raycast
 
-   ![img.png](docs/Raycast-Bitter.png)
+    ![img.png](docs/Raycast-Bitter.png)
 
 ## Personalisation
 
