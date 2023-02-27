@@ -1,6 +1,7 @@
 #!/bin/sh
-# Create a branch from the current branch
+# Checkout a branch from the current branch
 # in this format: rj/<dd-mm>/<branch-name>
 
 date=$(date '+%d-%b'|awk '{print tolower($0)}')
+# TODO: Replace with your name initials
 git checkout -b "rj/$date/$1"

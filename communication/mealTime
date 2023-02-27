@@ -1,14 +1,16 @@
 #!/bin/bash
+# Set Slack status to eating meal
+
 # Required Raycast parameters:
 # @raycast.schemaVersion 1
-# @raycast.title Slack status to lunch
+# @raycast.title Slack status to meal
 # @raycast.mode compact
 
-# Replace the placeholder with your Slack API token
-SLACK_API_TOKEN="xoxp-475133143249-3968771660946-4791945540275-f29b4a199d0e1e68e0fbf6650a0aaf0c"
+# TODO: Replace the placeholder with your Slack API token
+SLACK_API_TOKEN="<SLACK ACCESS TOKEN>"
 
 # Set your status text and emoji
-#STATUS_TEXT='Lunch'
+#STATUS_TEXT='Meal time'
 STATUS_EMOJI=':shallow_pan_of_food:'
 
 # Set your Slack status
@@ -17,7 +19,7 @@ curl -X POST -H "Authorization: Bearer $SLACK_API_TOKEN" \
 -d "{\"profile\": {\"status_text\":\"\",\"status_emoji\":\"$STATUS_EMOJI\",\"status_expiration\": 0}}" \
 https://api.slack.com/api/users.profile.set
 
-# Make a call to the Slack API to set your presence to "away"
+# Slack API call to set your presence to "away"
 curl -X POST -H "Authorization: Bearer $SLACK_API_TOKEN" \
 -H "Content-type: application/json" --data '{"presence": "away"}' \
 https://slack.com/api/users.setPresence

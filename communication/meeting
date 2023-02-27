@@ -1,5 +1,5 @@
 #!/bin/sh
-#Launch Cron/Calendar to start attending meetings
+# Launch Cron/Calendar to start attending meetings
 
 # Required Raycast parameters:
 # @raycast.schemaVersion 1

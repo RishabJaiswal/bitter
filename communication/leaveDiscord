@@ -1,13 +1,14 @@
 #!/bin/bash
+# Leave all Discord channels
 
-#run `brew install jq` for this script
+# NOTE: run `brew install jq` for this script
 
-API_TOKEN="MTA3MDU4NjE0MTc2MzQzNjU2NA.GLox8S.Y8joh13w3Drf8aDXNvlzyaYJBZfMRrmpDu89gQ"
+API_TOKEN="<DISCORD-ACCESS-TOKEN>"
 
 # All channels that you are a member of
 CHANNEL_LIST=$(curl -s -H "Authorization: Bot $API_TOKEN" "https://discord.com/api/users/@me/channels" | jq -r '.[].id')
 
-# Leave each one
+# Leave each channel
 for CHANNEL_ID in $CHANNEL_LIST; do
   curl -s -H "Authorization: Bot $API_TOKEN" -X DELETE "https://discord.com/api/channels/$CHANNEL_ID"
   echo "Left channel with ID $CHANNEL_ID"
