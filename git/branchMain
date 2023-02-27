@@ -3,6 +3,11 @@
 # Checkout a branch from main
 # in this format: rj/<dd-mm>/<branch-name>
 
+if [ $# -eq 0 ]; then
+  echo "Please give branch name"
+  exit 1
+fi
+
 git checkout main
 git pull
 branch "$1"
