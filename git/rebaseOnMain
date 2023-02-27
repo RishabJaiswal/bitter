@@ -1,6 +1,5 @@
 #!/bin/sh
-#This script rebases the current branch upon 
-#an updated main branch
+# Rebase the current branch upon an updated main branch
 
 set -euo pipefail
 
