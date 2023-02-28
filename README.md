@@ -1,5 +1,10 @@
 # Bitter productivity
 
+## About
+Bitter is a collection of bash scripts that help developers execute tasks, which are part of their daily workflow
+directly from commandline. Some bash scripts are compatible with Raycast. Appropriate Raycast comments are present in
+compatible scripts.
+
 ## Installation
 
 Simply make a clone of the repository
